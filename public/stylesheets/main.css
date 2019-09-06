@@ -1,0 +1,218 @@
+/* GENERAL */
+
+body {
+	background-color: #f8f8f8;
+}
+
+h2 {
+	margin-top: 0;
+}
+
+.alert {
+	width: 100%;
+}
+
+.button-container > * {
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+#hero {
+background-image: url(https://images.unsplash.com/photo-1464983953574-0892a716854b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+min-height: 40vh;
+background-size: cover;
+background-position: 50% 75%;
+border-radius: 0;
+color: white;
+display: flex;
+align-items: center;
+}
+
+.wrapper {
+	padding-top: 50px;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.jumbotron h1, .lead {
+text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+}
+
+.options-button {
+	border: 0;
+	background: none;
+	color: #b0b0b0;
+}
+
+.options-button:hover {
+	color: #007bff;
+}
+
+.options-button:focus {
+	outline: none;
+}
+
+.comment-container {
+	display: grid;
+	grid-template-columns: 30px auto 28px;
+}
+
+.comment-avatar {
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	object-fit: cover;
+}
+
+.comment-content {
+	background-color: #f8f8f8;
+	padding: 5px 10px;
+	border-radius: 10px;
+	margin: 0 10px 10px 10px;
+}
+
+.comment-buttons {
+	text-align: center;
+}
+
+.date {
+	color: #b0b0b0;
+	font-size: .9rem;
+}
+
+
+/* Login */
+.form-signin {
+	width: 100%;
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+
+/* FORMS */
+.form-container {
+	width: 30%;
+	min-width: 300px;
+	margin: 25px auto;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+/* USER */
+.current-user {
+	margin-top: 15px;
+}
+
+.avatar {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.user-campground-card {
+	margin-bottom: 20px;
+	min-height: 375px;
+}
+
+/* CAMP CARD */
+/* .card img {
+	width:100%;
+} */
+
+.card {
+	padding: 0;
+}
+
+.camp-img-preview {
+	position: relative;
+	display: block;
+}
+
+.camp-img-preview:before {
+	content: '';
+	display: block;
+	width: 100%;
+	padding-bottom: 56.25%;
+}
+
+.camp-img-preview img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 0% 100%;
+}
+
+.no-overflow {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+
+/* Google Maps */
+#map {
+	height: 400px;
+	width: 100%;
+	border-radius: 3px;
+}
+
+
+/* FOOTER */
+.footer-container {
+	position: relative;
+	width: 100%;
+	margin-top: auto;
+}
+
+footer {
+	background: #343a40;
+}
+
+.new-comment-container {
+	display: grid;
+	grid-template-columns: auto 28px;
+}
+
+.new-comment-container textarea {
+	margin-right: 10px;
+	border-radius: 5px;
+}
+
+.comment-submit {
+	font-size: 16pt;
+	border: 0;
+	background: none;
+	color: #28a745;
+}
+
+.comment-text {
+	padding-left: 10px;
+	padding-right: 10px;
+}

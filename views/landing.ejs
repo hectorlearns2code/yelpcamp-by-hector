@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YelpCamp</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="/stylesheets/landing.css">
+        <link rel="stylesheet" href="/stylesheets/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+    </head>
+    <body>
+    
+    <div class="container"></div>
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-success" role="alert">
+                <%= success %>
+            </div>
+        <% } %>
+    </div>
+    
+    <div id="landing-header">
+         <h1 class="text-center">Welcome to YelpCamp!</h1>
+
+         <div class="form-container">
+            <form action="/campgrounds" method="GET">
+                <div class="row">
+                    <div class="form-group col-7 pr-0">
+                        <input class="form-control" type="text" name="search" placeholder="Search campgrounds...">
+                    </div>
+                    <div class="form-group col-5">
+                        <button class="btn btn-lg btn-success btn-md btn-block">Search</button>
+                    </div>
+                </div>
+            </form>
+            <a href="/campgrounds" class="btn btn-lg btn-primary btn-block">View All Campgrounds</a>
+        </div>
+        
+    </div>
+    
+    <ul class="slideshow">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+<!-- <% include partials/footer %> -->

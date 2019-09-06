@@ -1,0 +1,44 @@
+<% include ./partials/header %>
+
+<div class="container mt-4">
+	<h1 class="text-center">SIGN UP!</h1>
+	<div class="row">
+		<div class="form-container">
+			<form action="/register" method="POST" enctype="multipart/form-data">
+				<div class="form-group">
+					<label for="username">Username</label>
+					<input class="form-control" type="text" name="username" placeholder="username" id="username">
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input class="form-control" type="password" name="password" placeholder="password" id="password">
+				</div>
+				<div class="form-group">
+					<label for="first-name">First Name</label>
+					<input class="form-control" type="text" name="user[firstName]" placeholder="John" id="first-name">
+				</div>
+				<div class="form-group">
+					<label for="last-name">Last Name</label>
+					<input class="form-control" type="text" name="user[lastName]" placeholder="Doe" id="last-name">
+				</div>
+				<div class="form-group">
+					<label for="email">Email Address</label>
+					<input class="form-control" type="email" name="user[email]" placeholder="jdoe@email.com" id="email">
+				</div>
+				<div class="form-group">
+					<label for="image">Image</label>
+					<input type="file" id="image" name="image" accept="image/*" required>
+				</div>
+				<div class="form-group">
+					<label for="admin-code">Admin Code</label>
+						<input class="form-control" type="password" name="user[adminCode]" placeholder="admin code" id="admin-code">
+				</div>
+				<div class="form-group">
+					<button class="btn btn-lg btn-primary btn-block">Sign Up</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<% include ./partials/footer %>

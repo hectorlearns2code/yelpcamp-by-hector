@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+
+<header class="jumbotron" id="hero">
+	<div class="text-center container">
+		<h1>Welcome to YelpCamp!</h1>
+		<p class="lead mb-4">View our hand-picked campgrounds from all over&nbsp;the&nbsp;world</p>
+		<a href="/campgrounds/new" class="btn btn-primary btn-lg">Share a Campground</a>
+	</div>
+</header>
+
+<div class="container">
+	<h3 class="text-center">Most Recent Campgrounds</h3>
+	<div class="row mt-4">
+		<% campgrounds.reverse().forEach(function(campground) { %>
+			<div class="col-md-6 col-lg-4 pb-sm-1 p-1">
+				<div class="card m-1">
+					<a href="/campgrounds/<%= campground._id %>" class="camp-img-preview">
+						<img src="<%= campground.image %>">
+					</a>
+					<div class="card-body">
+						<a href="/campgrounds/<%= campground._id %>">
+							<h5 class="card-title my-0 no-overflow"><%= campground.name %></h5>
+						</a>
+						<p class="my-0"><%= moment(campground.createDate).fromNow() %></p>
+					</div>
+				</div>
+			</div>
+		<% }); %>	
+	</div>
+</div>
+	
+
+
+
+<% include ../partials/footer %>

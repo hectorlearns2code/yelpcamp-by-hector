@@ -1,0 +1,33 @@
+<% include ../partials/header %>
+
+<div class="container pt-3">
+	<header class="jumbotron mt-4">
+			<% if(campgrounds.length < 1) { %>
+				<h2 class="text-center"><i class="fas fa-times-circle"></i> Sorry, no campground was found.</h2>
+				<p class="text-center">Try different keywords</p>
+			<% } else { %>
+				<h2 class="text-center"><i class="fas fa-campground"></i> Here are the campgrounds we found</h2>
+			<% } %>
+	</header>
+	<div class="container mt-4"></div>
+		<div class="row">
+			<% campgrounds.forEach(function(campground) { %>
+				<div class="col-md-6 col-lg-4 mb-sm-4">
+					<div class="card">
+						<a href="/campgrounds/<%= campground._id %>" class="camp-img-preview">
+							<img src="<%= campground.image %>">
+						</a>
+						<div class="card-body">
+							<a href="/campgrounds/<%= campground._id %>">
+								<h5 class="card-title my-0 no-overflow"><%= campground.name %></h5>
+							</a>
+							<p class="my-0"><%= moment(campground.createDate).fromNow() %></p>
+						</div>
+					</div>
+				</div>
+			<% }); %>	
+	</div>
+</div>
+
+
+<% include ../partials/footer %>
